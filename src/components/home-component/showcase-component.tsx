@@ -18,12 +18,12 @@ export default function ShowcaseComponent({ showcaseData, langId }: ShowcaseComp
         <Carousel>
             {showcaseData.map((data: ShowcaseData) => {
                 return <CarouselItem key={data.showcaseId} onClick={() => console.log("test")}>
-                    <Link href={data.showcaseUrl} className='showcase-item'>
+                    <Link href={data.showcaseUrl} className="group flex items-center justify-center">
                         <div>
-                            <div className='showcase-text'>
+                            <div className="group-hover:opacity-100 opacity-[0] absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-[3vw] font-bold w-[80%] left-[10%]">
                                 <p>{data.showcaseTitle[String(langId)]}</p>
                             </div>
-                            <iframe src={data.showcaseImageUrl} onClick={() => { window.location.href = data.showcaseUrl }} ></iframe>
+                            <iframe className="pointer-events-none w-[90vw] h-[30vw]" src={data.showcaseImageUrl} onClick={() => { window.location.href = data.showcaseUrl }} ></iframe>
                         </div>
                     </Link>
                 </CarouselItem>

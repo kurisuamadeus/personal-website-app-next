@@ -31,10 +31,14 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <header className="bg-gray-800 text-white">
-          <HeaderComponent />
-        </header>
-        {children}
+        <div className="bg-black min-h-screen text-white">
+          <header className="absolute top-[15%] justify-center items-center w-full h-[90%]">
+            <HeaderComponent backendDomain={process.env.BACKEND_DOMAIN} backendPort={process.env.BACKEND_PORT} />
+          </header>
+          <div className="w-9/10 mt-[7vw]">
+            {children}
+          </div>
+        </div>
       </body>
     </html>
   );

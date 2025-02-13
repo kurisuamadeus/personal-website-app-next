@@ -1,6 +1,9 @@
-export default function HeaderButton() {
-    return <div>
+import "@/styles/components/header/header-button.css"
+type HeaderButtonProps = {
+    label: string
+    destUrl: string
+}
 
-    </div>
-
+export default function HeaderButton({ label, destUrl }: HeaderButtonProps) {
+    return <a className='header-button' href={destUrl}>{label}</a>
 }

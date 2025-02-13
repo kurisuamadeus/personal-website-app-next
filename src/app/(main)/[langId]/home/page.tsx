@@ -26,8 +26,7 @@ export default async function Home({ params }: { params: Promise<{ langId: strin
     const showcaseDataJSON = await showcaseDataRes.json();
 
 
-    return <div>
-        Home
+    return <div className="flex items-center justify-center h-screen">
         <ShowcaseComponent showcaseData={showcaseDataJSON.data} langId={langId} />
     </div>
 
