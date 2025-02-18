@@ -1,12 +1,12 @@
 import { useLanguageStore } from "@/store/store";
 import { useEffect } from "react";
 import { useRouter } from "next/router";
+import { languageAvailable } from "@/utils/helper";
 
 
 export default function HeaderLangSelector() {
     const { lang, setLang } = useLanguageStore();
-    // const router = useRouter();
-    const languageAvailable = ['en', 'jp'];
+
 
     // run on component mount
     useEffect(() => {
@@ -32,8 +32,8 @@ export default function HeaderLangSelector() {
             }
         }
     }, [])
-    return <div className='absolute right-8 top-0 p-4 text-black'>
-        <select className="w-[7vw] h-[7vw] max-w-[100px] max-h-[100px] font-[min(2vw, 25px) appearance-none] rounded-[20%] text-align-last-center" onChange={(e) => {
+    return <div className='absolute top-0 right-[3vw] pt-[2vh] text-black'>
+        <select className="w-[7vw] h-[7vw] max-w-[100px] max-h-[100px] font-[min(2vw, 25px)] appearance-none rounded-[20%] text-align-last-center" onChange={(e) => {
             setLang(e.target.value)
             let currentUrl = window.location.href.split('/')
             currentUrl[3] = e.target.value

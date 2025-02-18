@@ -3,9 +3,9 @@ import { useEffect, useRef, useState } from "react";
 import HeaderButtons from "./header-buttons";
 import HeaderLangSelector from "./header-lang-selector";
 import axios from "axios";
-import { useLanguageStore } from "@/store/store";
 
-const logoUrl = '/vercel.svg';
+
+const logoUrl = '/logowhite.svg';
 
 interface HeaderData {
     homeTitle: string,
@@ -43,7 +43,7 @@ export default function HeaderComponent({ backendDomain, backendPort }: HeaderCo
         }
     }, [])
     return <div className="fixed bg-[#424242] text-white top-0 z-1 w-full h-[15%] justify-between items-center">
-        <a className='absolute left-8 top-0 p-4 text-black' href='/'><img className='w-[5vw] min-w-[50px]' src={logoUrl} /></a>
+        <a className='absolute top-0 left-[3vw] p-4 text-black' href='/'><img className='w-[5vw] min-w-[50px]' src={logoUrl} /></a>
         <HeaderButtons pageData={pageData} />
         <HeaderLangSelector />
     </div>

@@ -1,13 +1,9 @@
 "use client";
+import { ShowcaseData } from "@/types";
 import Link from "next/link"
 import { Carousel, CarouselItem } from "react-bootstrap"
 
-type ShowcaseData = {
-    showcaseId: string,
-    showcaseImageUrl: string,
-    showcaseTitle: any,
-    showcaseUrl: string
-}
+
 interface ShowcaseComponentProps {
     showcaseData: ShowcaseData[],
     langId: string
