@@ -17,7 +17,7 @@ export default function ShowcaseComponent({ showcaseData, langId }: ShowcaseComp
                     <Link href={data.showcaseUrl} className="group flex items-center justify-center">
                         <div>
                             <div className="group-hover:opacity-100 opacity-[0] absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white text-[3vw] font-bold w-[80%] left-[10%]">
-                                <p>{data.showcaseTitle[String(langId)]}</p>
+                                <p>{langId === "jp" ? data.showcaseTitle.jp : data.showcaseTitle.en}</p>
                             </div>
                             <iframe className="pointer-events-none w-[90vw] h-[30vw]" src={data.showcaseImageUrl} onClick={() => { window.location.href = data.showcaseUrl }} ></iframe>
                         </div>

@@ -1,6 +1,11 @@
 export type ShowcaseData = {
     showcaseId: string,
     showcaseImageUrl: string,
-    showcaseTitle: any,
+    showcaseTitle: ShowcaseTitle,
     showcaseUrl: string
+}
+
+export type ShowcaseTitle = {
+    en: string,
+    jp: string
 }

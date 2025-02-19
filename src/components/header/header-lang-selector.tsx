@@ -1,6 +1,5 @@
 import { useLanguageStore } from "@/store/store";
 import { useEffect } from "react";
-import { useRouter } from "next/router";
 import { languageAvailable } from "@/utils/helper";
 
 
@@ -10,7 +9,8 @@ export default function HeaderLangSelector() {
 
     // run on component mount
     useEffect(() => {
-        let currentUrl = window.location.href.split('/')
+        let currentUrl = []
+        currentUrl = window.location.href.split('/')
         // if lang is empty, set it
         if (lang == '') {
             // if language in url is valid, set lang to url language, else set to english
@@ -35,7 +35,8 @@ export default function HeaderLangSelector() {
     return <div className='absolute top-0 right-[3vw] pt-[2vh] text-black'>
         <select className="w-[7vw] h-[7vw] max-w-[100px] max-h-[100px] font-[min(2vw, 25px)] appearance-none rounded-[20%] text-align-last-center" onChange={(e) => {
             setLang(e.target.value)
-            let currentUrl = window.location.href.split('/')
+            let currentUrl = []
+            currentUrl = window.location.href.split('/')
             currentUrl[3] = e.target.value
             window.location.href = currentUrl.join('/')
         }} value={lang}>

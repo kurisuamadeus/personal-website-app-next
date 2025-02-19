@@ -1,12 +1,7 @@
 import { useLanguageStore } from "@/store/store";
 import HeaderButton from "./header-button"
+import { HeaderData } from "@/types";
 
-interface HeaderData {
-    homeTitle: string,
-    profileTitle: string,
-    projectsTitle: string,
-    contactTitle: string
-}
 
 interface HeaderButtonProps {
     pageData: HeaderData | undefined

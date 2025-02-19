@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import FooterComponent from "@/components/footer/footer-component";
-import HeaderComponent from "@/components/header/header-component";
+
 
 
 const geistSans = Geist({
@@ -25,6 +24,7 @@ export default function RootLayout({
     children,
 }: Readonly<{
     children: React.ReactNode;
+    params: Promise<{ langId: string }>
 }>) {
     return (
         <html lang="en">

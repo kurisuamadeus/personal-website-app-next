@@ -1,6 +1,6 @@
 "use client";
 
-import { contactFormSchema, ContactFormSchemaMessages } from "@/schema/schema";
+import { contactFormSchema } from "@/schema/schema";
 import { ContactPageData } from "@/types";
 import FormValidationMessage from "@/utils/helper/form-validation-message";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -31,6 +31,7 @@ export default function ContactForm({ pageData, backendDomain, backendPort }: Co
                 console.log(data);
                 axios.post(`${backendDomain}:${backendPort}/sendmessage`, data)
                     .then(res => {
+                        console.log(res);
                         alert(pageData?.submitNotificationText != undefined ? pageData?.submitNotificationText : "sent");
                         setDisableSubmitButton(false)
                     })

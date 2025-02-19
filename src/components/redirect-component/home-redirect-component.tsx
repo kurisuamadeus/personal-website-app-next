@@ -7,7 +7,8 @@ import { useEffect } from "react";
 function HomeRedirectComponent() {
     const { lang, setLang } = useLanguageStore();
     useEffect(() => {
-        let currentUrl = window.location.href.split('/')
+        let currentUrl = [];
+        currentUrl = window.location.href.split('/')
         // if lang is empty, redirect to en
         if (lang == '') {
             setLang('en');
