@@ -8,6 +8,7 @@ export type ProjectData = {
 }
 export type ProjectContentData = {
     [key: string]: {
-        title: string
+        title: string,
+        desc: string
     }
 }
