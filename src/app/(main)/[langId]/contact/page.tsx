@@ -5,6 +5,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "AmadeusDev | Contact",
+    description: "Contact page",
+    robots: "index, nofollow",
 };
 
 export default async function Contact({ params }: { params: Promise<{ langId: string }> }) {

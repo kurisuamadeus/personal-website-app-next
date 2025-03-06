@@ -5,6 +5,8 @@ import { format } from "react-string-format"
 
 export const metadata: Metadata = {
     title: "AmadeusDev | Profile",
+    description: "My profile containing the stack i can use.",
+    robots: "index, nofollow",
 };
 
 export default async function Profile({ params }: { params: Promise<{ langId: string }> }) {

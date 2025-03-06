@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     icons: {
         icon: '/favicon.svg',
     },
-
+    robots: "noindex, nofollow",
 };
 
 export default function RootLayout({

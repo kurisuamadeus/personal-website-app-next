@@ -5,6 +5,8 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
     title: "AmadeusDev | Projects",
+    description: "Showcase of the projects i ever made.",
+    robots: "index, nofollow",
 };
 
 export default async function Projects({ params }: { params: Promise<{ langId: string }> }) {

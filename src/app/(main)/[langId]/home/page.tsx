@@ -4,7 +4,9 @@ import { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-    title: "AmadeusDev | Home",
+    title: "AmadeusDev",
+    description: "My personal website containing showcase of my peojects and information of the stack i can use.",
+    robots: "index, follow",
 };
 
 export default async function Home({ params }: { params: Promise<{ langId: string }> }) {

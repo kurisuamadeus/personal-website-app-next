@@ -1,6 +1,13 @@
 import HeaderComponent from "@/components/header/header-component";
 import axios from "axios";
 import { HeaderData } from "@/types";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "AmadeusDev",
+    robots: "noindex, nofollow",
+}
+
 
 export default async function MainLayout({
     children,
