@@ -14,7 +14,7 @@ export default async function Contact({ params }: { params: Promise<{ langId: st
     const contactPageDataRes = await axios.get(`${process.env.BACKEND_DOMAIN}:${process.env.BACKEND_PORT}/getpagedata?lang=${langId}&dataname=contact`);
     const pageData: ContactPageData = contactPageDataRes.data.data.content;
     return <div className="flex justify-center items-center h-screen">
-        <ContactForm pageData={pageData} backendDomain={process.env.BACKEND_DOMAIN} backendPort={process.env.BACKEND_PORT} />
+        <ContactForm pageData={pageData} />
     </div>
 
 }
