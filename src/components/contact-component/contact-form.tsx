@@ -10,13 +10,11 @@ import { useForm } from "react-hook-form";
 
 interface ContactFormProps {
     pageData: ContactPageData
-    backendDomain: string | undefined,
-    backendPort: string | undefined
 }
 
 
 
-export default function ContactForm({ pageData, backendDomain, backendPort }: ContactFormProps) {
+export default function ContactForm({ pageData }: ContactFormProps) {
     const [disableSubmitButton, setDisableSubmitButton] = useState(false);
     const { register, handleSubmit, formState } = useForm({
         mode: 'onBlur',
@@ -29,7 +27,7 @@ export default function ContactForm({ pageData, backendDomain, backendPort }: Co
             <form className="flex flex-col items-start w-[80vw] max-w-[800px]" onSubmit={handleSubmit((data) => {
                 setDisableSubmitButton(true);
                 console.log(data);
-                axios.post(`${backendDomain}:${backendPort}/sendmessage`, data)
+                axios.post(`${window.location.origin}/api/contact-form/submit`, data)
                     .then(res => {
                         console.log(res);
                         alert(pageData?.submitNotificationText != undefined ? pageData?.submitNotificationText : "sent");
