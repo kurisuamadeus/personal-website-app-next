@@ -1,6 +1,6 @@
 # Personal Website App Frontend Remake
 
-### 言語設定
+#### 言語設定
 [English](README.md)  
 [**日本語**](README-JP.md)　＜ー  
 
