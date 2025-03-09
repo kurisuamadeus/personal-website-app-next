@@ -1,8 +1,8 @@
 # Personal Website App Frontend Remake
 
 ### 言語設定
-[English](README.md)
-[**日本語**](README-JP.md)　＜ー
+[English](README.md)  
+[**日本語**](README-JP.md)　＜ー  
 
 自分の個人サイトのフロントエンド（https://github.com/kurisuamadeus/personal-website-app）のリメイクプロジェクトです。Next.jsとTailwindCSSを使ってリメイクを作りました。
 This is a remake of my personal website app project frontend (https://github.com/kurisuamadeus/personal-website-app) using Next.js and change the styling to using TailwindCSS mainly.
