@@ -5,7 +5,6 @@
 [**日本語**](README-JP.md)　＜ー  
 
 自分の個人サイトのフロントエンド (https://github.com/kurisuamadeus/personal-website-app) のリメイクプロジェクトです。Next.jsとTailwindCSSを使ってリメイクを作りました。
-This is a remake of my personal website app project frontend (https://github.com/kurisuamadeus/personal-website-app) using Next.js and change the styling to using TailwindCSS mainly.
 
 ## このプロジェクトにはオリジナルに比べれば、何が違うのか？
 - このプロジェクトのスタイリングには、基本的にTailwindCSSに使用します。その結果、CSSファイルの数を減らすことができました。
