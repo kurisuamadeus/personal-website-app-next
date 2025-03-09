@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Website App Frontend Remake
 
-## Getting Started
+### Language Setting
+[**English**](README.md)　＜ー
+[日本語](README-JP.md)
 
-First, run the development server:
+This is a remake of my personal website app project frontend (https://github.com/kurisuamadeus/personal-website-app) using Next.js and change the styling to using TailwindCSS mainly.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## What the difference between this project and the old one?
+- The styling in this project mainly done using TailwindCSS which reduce the number of CSS file need to be used and maintained.
+- In this remake, I tried to use SSR (Server Side Rendering) approach which is one of Next.js main feature and the main reason I decided to remake this project. Because I notice that there is a delay on displaying text/data in the website which is not really appealing. So instead of fetching data in a client like the old version, this time, it'll be done in server instead. So when my website being displayed, it already has the data needed to be displayed.
+- In this remake, I use Next.js App Router instead of normal react router to make it easier to maintain. 
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Stack being used
+- Typescript
+- Next.js
+- Bootstrap (React Bootstrap)
+- TailwindCSS
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Library being used
+- zustand
+- axios
+- yup
+- react-hook-form
+- react-string-format
