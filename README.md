@@ -1,8 +1,8 @@
 # Personal Website App Frontend Remake
 
 ### Language Setting
-[**English**](README.md)　＜ー
-[日本語](README-JP.md)
+[**English**](README.md)　＜ー  
+[日本語](README-JP.md)  
 
 This is a remake of my personal website app project frontend (https://github.com/kurisuamadeus/personal-website-app) using Next.js and change the styling to using TailwindCSS mainly.
 
